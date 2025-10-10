@@ -1,0 +1,117 @@
+# Wamp root
+/alias
+/apps
+/bin
+/cgi-bin
+/files
+/lang
+/logs
+/save
+/scripts
+/tmp
+/www
+/node_modules
+/*.txt
+/*.bmp
+/*.bat
+/*.msg
+/unins000.*
+/wampmanager.*
+
+# Obsidian vault config
+.obsidian/workspace*.json
+
+# dotenv environment variable files
+_env
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# apps
+# /apps/adminer*
+# /apps/phpsysinfo*
+# /apps/phpmyadmin*/doc
+# /apps/phpmyadmin*/examples
+# /apps/phpmyadmin*/js
+# /apps/phpmyadmin*/libraries
+# /apps/phpmyadmin*/locale
+# /apps/phpmyadmin*/setup
+# /apps/phpmyadmin*/sql
+# /apps/phpmyadmin*/templates
+# /apps/phpmyadmin*/themes
+# /apps/phpmyadmin*/tmp
+# /apps/phpmyadmin*/vendor
+# /apps/phpmyadmin*/*.json
+# /apps/phpmyadmin*/*log
+# /apps/phpmyadmin*/composer.*
+# /apps/phpmyadmin*/contributing.md
+# /apps/phpmyadmin*/*.ico
+# /apps/phpmyadmin*/index.php
+# /apps/phpmyadmin*/LICENSE
+# /apps/phpmyadmin*/README
+# /apps/phpmyadmin*/release-*
+# /apps/phpmyadmin*/*.txt
+# /apps/phpmyadmin*/show_config_errors.php
+# /apps/phpmyadmin*/url.php
+# /apps/phpmyadmin*/yarn.lock
+
+# MariaDB
+# /bin/MariaDB
+
+# Apache
+# /bin/apache/modules_sup
+# /bin/apache/*/bin
+# /bin/apache/*/cgi-bin
+# /bin/apache/*/error
+# /bin/apache/*/htdocs
+# /bin/apache/*/icons
+# /bin/apache/*/include
+# /bin/apache/*/lib
+# /bin/apache/*/logs
+# /bin/apache/*/manual
+# /bin/apache/*/modules
+# /bin/apache/*/*.*
+
+# Apache conf
+# /bin/apache/*/conf/original
+# /bin/apache/*/conf/charset.conv
+# /bin/apache/*/conf/magic
+# /bin/apache/*/conf/mime.types
+# /bin/apache/*/conf/openssl.cnf
+
+# MySQL
+# /bin/mysql/*/bin
+# /bin/mysql/*/data
+# /bin/mysql/*/docs
+# /bin/mysql/*/include
+# /bin/mysql/*/lib
+# /bin/mysql/*/mysql-test
+# /bin/mysql/*/scripts
+# /bin/mysql/*/share
+# /bin/mysql/*/sql-bench
+
+# /bin/mysql/*/LICENSE
+# /bin/mysql/*/my-default.ini
+# /bin/mysql/*/README
+# /bin/mysql/*/wampserver.conf
+
+# PHP
+# /bin/php/DO_NOT_DELETE*.*
+
+# /bin/php/*/dev
+# /bin/php/*/ext
+# /bin/php/*/extras
+# /bin/php/*/lib
+# /bin/php/*/sasl2
+# /bin/php/*/zend_ext
+
+# /bin/php/*/*.dll
+# /bin/php/*/*.exe
+# /bin/php/*/*.lib
+# /bin/php/*/*.txt
+# /bin/php/*/*.bat
+# /bin/php/*/*.phar
+# /bin/php/*/README.*
+# /bin/php/*/wampserver.*

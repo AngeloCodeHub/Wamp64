@@ -1,0 +1,19 @@
+{
+  "userIgnoreFilters": [
+    "node_modules/",
+    "src/",
+    "alias/",
+    "bin/",
+    "apps/",
+    "cgi-bin/",
+    "lang/",
+    "files/",
+    "tmp/",
+    "www/"
+  ],
+  "showInlineTitle": true,
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "defaultViewMode": "preview",
+  "tabSize": 2
+}
