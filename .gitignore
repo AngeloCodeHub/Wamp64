@@ -1,7 +1,6 @@
 # Wamp root
 /alias
 /apps
-/bin
 /cgi-bin
 /files
 /lang
@@ -57,61 +56,22 @@ _env
 # /apps/phpmyadmin*/url.php
 # /apps/phpmyadmin*/yarn.lock
 
-# MariaDB
-# /bin/MariaDB
+# bin/MariaDB
+/bin/MariaDB
 
-# Apache
-# /bin/apache/modules_sup
-# /bin/apache/*/bin
-# /bin/apache/*/cgi-bin
-# /bin/apache/*/error
-# /bin/apache/*/htdocs
-# /bin/apache/*/icons
-# /bin/apache/*/include
-# /bin/apache/*/lib
-# /bin/apache/*/logs
-# /bin/apache/*/manual
-# /bin/apache/*/modules
-# /bin/apache/*/*.*
+# bin/Apache/
+/bin/apache/*/*
+/bin/apache/*/conf/original
+!/bin/apache/*/conf
+/bin/apache/modules_sup
+/bin/apache/*/*.*
 
-# Apache conf
-# /bin/apache/*/conf/original
-# /bin/apache/*/conf/charset.conv
-# /bin/apache/*/conf/magic
-# /bin/apache/*/conf/mime.types
-# /bin/apache/*/conf/openssl.cnf
+# bin/MySQL
+/bin/mysql/*/*
+!/bin/mysql/*/my.ini
 
-# MySQL
-# /bin/mysql/*/bin
-# /bin/mysql/*/data
-# /bin/mysql/*/docs
-# /bin/mysql/*/include
-# /bin/mysql/*/lib
-# /bin/mysql/*/mysql-test
-# /bin/mysql/*/scripts
-# /bin/mysql/*/share
-# /bin/mysql/*/sql-bench
-
-# /bin/mysql/*/LICENSE
-# /bin/mysql/*/my-default.ini
-# /bin/mysql/*/README
-# /bin/mysql/*/wampserver.conf
-
-# PHP
-# /bin/php/DO_NOT_DELETE*.*
-
-# /bin/php/*/dev
-# /bin/php/*/ext
-# /bin/php/*/extras
-# /bin/php/*/lib
-# /bin/php/*/sasl2
-# /bin/php/*/zend_ext
-
-# /bin/php/*/*.dll
-# /bin/php/*/*.exe
-# /bin/php/*/*.lib
-# /bin/php/*/*.txt
-# /bin/php/*/*.bat
-# /bin/php/*/*.phar
-# /bin/php/*/README.*
-# /bin/php/*/wampserver.*
+# bin/PHP
+/bin/php/DO_NOT_DELETE_*
+/bin/php/*/*
+!/bin/php/*/php.ini*
+!/bin/php/*/phpForApache.ini
