@@ -13,5 +13,9 @@
     "unins000.*": true,
     "wamp*": true,
     "save": true,
+    "*.bat": true,
+    "scripts": true,
+    "alias": true,
+    "node_modules": true
   },
 }
