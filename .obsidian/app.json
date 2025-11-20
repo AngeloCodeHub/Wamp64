@@ -11,7 +11,7 @@
     "tmp/",
     "www/"
   ],
-  "showInlineTitle": true,
+  "showInlineTitle": false,
   "showLineNumber": true,
   "alwaysUpdateLinks": true,
   "defaultViewMode": "preview",
