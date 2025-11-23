@@ -137,6 +137,13 @@
         "type": "DIRECTORIES",
         "pattern": "www",
         "patternType": "STRICT"
+      },
+      {
+        "name": "",
+        "active": true,
+        "type": "DIRECTORIES",
+        "pattern": "vendor",
+        "patternType": "STRICT"
       }
     ],
     "frontMatter": [

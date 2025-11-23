@@ -9,7 +9,8 @@
     "lang/",
     "files/",
     "tmp/",
-    "www/"
+    "www/",
+    "vendor/"
   ],
   "showInlineTitle": false,
   "showLineNumber": true,

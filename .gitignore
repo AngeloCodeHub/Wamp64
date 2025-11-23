@@ -15,6 +15,7 @@
 /*.msg
 /unins000.*
 /wampmanager.*
+/vendor
 
 # Obsidian vault config
 .obsidian/workspace*.json
