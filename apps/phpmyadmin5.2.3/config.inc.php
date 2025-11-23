@@ -1,4 +1,18 @@
 <?php
+require_once __DIR__ . '/../../vendor/autoload.php';
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv = Dotenv\Dotenv::createImmutable('c:/wamp64');
+$dotenv->load();
+
+$Feng_POS = $_ENV['Name_Feng'] ?? null;
+$Nan_POS = $_ENV['Name_Nan'] ?? null;
+$DC2 = $_ENV['Name_DC2'] ?? null;
+
+$Feng_Add = $_ENV['Add_Feng'] ?? null;
+$Nan_Add = $_ENV['Add_Nan'] ?? null;
+$DC2_Add = $_ENV['Add_DC2'] ?? null;
+
+$DC2_Port = $_ENV['Add_Port'] ?? null;
 
 /* Servers configuration */
 $i = 0;
@@ -12,40 +26,88 @@ $cfg['blowfish_secret'] = 'h]C+{nqW$omNoTIkCwC$%z-LTcy%p6_j';
 $wampConf = @parse_ini_file('../../wampmanager.conf');
 //Check if MySQL and MariaDB with MariaDB on default port
 $mariaFirst = ($wampConf['SupportMySQL'] == 'on' && $wampConf['SupportMariaDB'] == 'on' && $wampConf['mariaPortUsed'] == $wampConf['mysqlDefaultPort']) ? true : false;
-if($wampConf['SupportMySQL'] == 'on') {
-/* Server: localhost [1] */
-	$i++;
-	if($mariaFirst) $i++;
-	$cfg['Servers'][$i]['verbose'] = 'MySQL';
-	$cfg['Servers'][$i]['host'] = '127.0.0.1';
-	$cfg['Servers'][$i]['port'] = $wampConf['mysqlPortUsed'];
-	$cfg['Servers'][$i]['extension'] = 'mysqli';
-	$cfg['Servers'][$i]['auth_type'] = 'cookie';
-	$cfg['Servers'][$i]['user'] = '';
-	$cfg['Servers'][$i]['password'] = '';
+if ($wampConf['SupportMySQL'] == 'on') {
+  /* Server: localhost [1] */
+  $i++;
+  if ($mariaFirst) $i++;
+  $cfg['Servers'][$i]['verbose'] = 'MySQL';
+  $cfg['Servers'][$i]['host'] = '127.0.0.1';
+  $cfg['Servers'][$i]['port'] = $wampConf['mysqlPortUsed'];
+  $cfg['Servers'][$i]['extension'] = 'mysqli';
+  $cfg['Servers'][$i]['auth_type'] = 'cookie';
+  $cfg['Servers'][$i]['user'] = '';
+  $cfg['Servers'][$i]['password'] = '';
 
-	// Hidden databases in PhpMyAdmin left panel
-	$cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
+  // Hidden databases in PhpMyAdmin left panel
+  $cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
 
-	// Allow connection without password
-	$cfg['Servers'][$i]['AllowNoPassword'] = true;
+  // Allow connection without password
+  $cfg['Servers'][$i]['AllowNoPassword'] = true;
+
+  $i++;
+  if ($mariaFirst) $i++;
+  $cfg['Servers'][$i]['verbose'] = $Feng_POS;
+  $cfg['Servers'][$i]['host'] = $Feng_Add;
+  $cfg['Servers'][$i]['port'] = $wampConf['mysqlPortUsed'];
+  $cfg['Servers'][$i]['extension'] = 'mysqli';
+  $cfg['Servers'][$i]['auth_type'] = 'cookie';
+  $cfg['Servers'][$i]['user'] = '';
+  $cfg['Servers'][$i]['password'] = '';
+
+  // Hidden databases in PhpMyAdmin left panel
+  $cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
+
+  // Allow connection without password
+  $cfg['Servers'][$i]['AllowNoPassword'] = true;
+
+  $i++;
+  if ($mariaFirst) $i++;
+  $cfg['Servers'][$i]['verbose'] = $Nan_POS;
+  $cfg['Servers'][$i]['host'] = $Nan_Add;
+  $cfg['Servers'][$i]['port'] = $wampConf['mysqlPortUsed'];
+  $cfg['Servers'][$i]['extension'] = 'mysqli';
+  $cfg['Servers'][$i]['auth_type'] = 'cookie';
+  $cfg['Servers'][$i]['user'] = '';
+  $cfg['Servers'][$i]['password'] = '';
+
+  // Hidden databases in PhpMyAdmin left panel
+  $cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
+
+  // Allow connection without password
+  $cfg['Servers'][$i]['AllowNoPassword'] = true;
+
+  $i++;
+  if ($mariaFirst) $i++;
+  $cfg['Servers'][$i]['verbose'] = $DC2;
+  $cfg['Servers'][$i]['host'] = $DC2_Add;
+  $cfg['Servers'][$i]['port'] = $DC2_Port;
+  $cfg['Servers'][$i]['extension'] = 'mysqli';
+  $cfg['Servers'][$i]['auth_type'] = 'cookie';
+  $cfg['Servers'][$i]['user'] = '';
+  $cfg['Servers'][$i]['password'] = '';
+
+  // Hidden databases in PhpMyAdmin left panel
+  $cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
+
+  // Allow connection without password
+  $cfg['Servers'][$i]['AllowNoPassword'] = true;
 }
 /* Server: localhost [2] */
-if($wampConf['SupportMariaDB'] =='on') {
-	$i++;
-	if($mariaFirst) $i -= 2;
-	$cfg['Servers'][$i]['verbose'] = 'MariaDB';
-	$cfg['Servers'][$i]['host'] = '127.0.0.1';
-	$cfg['Servers'][$i]['port'] = $wampConf['mariaPortUsed'];
-	$cfg['Servers'][$i]['extension'] = 'mysqli';
-	$cfg['Servers'][$i]['auth_type'] = 'cookie';
-	$cfg['Servers'][$i]['user'] = '';
-	$cfg['Servers'][$i]['password'] = '';
+if ($wampConf['SupportMariaDB'] == 'on') {
+  $i++;
+  if ($mariaFirst) $i -= 2;
+  $cfg['Servers'][$i]['verbose'] = 'MariaDB';
+  $cfg['Servers'][$i]['host'] = '127.0.0.1';
+  $cfg['Servers'][$i]['port'] = $wampConf['mariaPortUsed'];
+  $cfg['Servers'][$i]['extension'] = 'mysqli';
+  $cfg['Servers'][$i]['auth_type'] = 'cookie';
+  $cfg['Servers'][$i]['user'] = '';
+  $cfg['Servers'][$i]['password'] = '';
 
-	// Hidden databases in PhpMyAdmin left panel
-	$cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
-	// Allow connection without password
-	$cfg['Servers'][$i]['AllowNoPassword'] = true;
+  // Hidden databases in PhpMyAdmin left panel
+  $cfg['Servers'][$i]['hide_db'] = '(information_schema|mysql|performance_schema|sys)';
+  // Allow connection without password
+  $cfg['Servers'][$i]['AllowNoPassword'] = true;
 }
 
 // Suppress Warning about pmadb tables
@@ -57,5 +119,3 @@ $cfg['Export']['sql_if_not_exists'] = true;
 
 $cfg['MySQLManualBase'] = 'http://dev.mysql.com/doc/refman/5.7/en/';
 /* End of servers configuration */
-
-?>
